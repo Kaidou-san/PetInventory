@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Pet>
+<div class="text-center">
+    <h1 class="display-4">Welcome Pets</h1>
+    <p>Names of all Pets</a>:</p>
+    <table class="table table-striped">
+        <tr>
+            <th>Pet Name</th>
+            <th>Pet Species</th>
+            <th>Pet Age</th>
+        </tr>
+        @{
+        foreach(Pet s in Model)
+        {
+            <tr>
+                <td>@s.Name</td>
+                <td>@s.Species</td>
+                <td>@s.Age</td>
+            </tr>
+        }
+    }
+    </table>
+    @* <h2>@ViewBag.message</h2> *@
+</div>
